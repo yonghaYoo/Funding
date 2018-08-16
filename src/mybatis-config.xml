@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="Funding.Bean.Member" alias="Member"/>
+		<typeAlias type="Funding.Bean.Contents" alias="Contents"/>
+		<typeAlias type="Funding.Bean.Funding" alias="Funding"/>
+		<typeAlias type="Funding.Bean.FundingCancle" alias="FundingCancle"/>
+		<typeAlias type="Funding.Bean.Payment" alias="Payment"/>
+		<typeAlias type="Funding.Bean.Reword" alias="Reword"/>
+		
+		
+	</typeAliases>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/oracle"/>
+			</dataSource>
+		</environment>		
+	</environments>
+	
+	<mappers>
+		<mapper resource="Funding/xml/Contents.xml"/>
+		<mapper resource="Funding/xml/Funding.xml"/>
+		<mapper resource="Funding/xml/FundingCancle.xml"/>
+		<mapper resource="Funding/xml/Member.xml"/>
+		<mapper resource="Funding/xml/Payment.xml"/>
+		<mapper resource="Funding/xml/Reword.xml"/>
+		
+	</mappers>
+	
+</configuration>
