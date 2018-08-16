@@ -8,6 +8,22 @@ public class Payment implements Serializable {
 	private int p_usepoint;
 	private int p_givepoint;
 	private int f_num;
+	
+	public Payment() {}
+	
+	
+	
+	public Payment(int p_num, int p_payday, int p_usepoint, int p_givepoint, int f_num) {
+		super();
+		this.p_num = p_num;
+		this.p_payday = p_payday;
+		this.p_usepoint = p_usepoint;
+		this.p_givepoint = p_givepoint;
+		this.f_num = f_num;
+	}
+
+
+
 	public int getP_num() {
 		return p_num;
 	}

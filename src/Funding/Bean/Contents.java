@@ -14,6 +14,29 @@ public class Contents implements Serializable {
 	private String c_dead;
 	private int c_goal;
 	private int c_sumprice;
+	
+	public Contents() { }
+	
+	
+	
+	public Contents(int c_num, String c_title, String c_cate, String c_titleimg, String c_intro, String c_text,
+			String c_midimg, String c_topimg, String c_dead, int c_goal, int c_sumprice) {
+		super();
+		this.c_num = c_num;
+		this.c_title = c_title;
+		this.c_cate = c_cate;
+		this.c_titleimg = c_titleimg;
+		this.c_intro = c_intro;
+		this.c_text = c_text;
+		this.c_midimg = c_midimg;
+		this.c_topimg = c_topimg;
+		this.c_dead = c_dead;
+		this.c_goal = c_goal;
+		this.c_sumprice = c_sumprice;
+	}
+
+
+
 	public int getC_num() {
 		return c_num;
 	}

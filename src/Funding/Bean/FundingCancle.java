@@ -7,6 +7,18 @@ public class FundingCancle implements Serializable{
 	private int fc_cancleday;
 	private int f_num;
 	
+	
+	public FundingCancle() {	}
+	
+	
+	public FundingCancle(int fc_num, int fc_cancleday, int f_num) {
+		super();
+		this.fc_num = fc_num;
+		this.fc_cancleday = fc_cancleday;
+		this.f_num = f_num;
+	}
+
+
 	public int getFc_num() {
 		return fc_num;
 	}

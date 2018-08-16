@@ -9,6 +9,21 @@ public class Reword implements Serializable {
 	private int r_price;
 	private int r_depay;
 	private int c_num;
+	
+	public Reword() {}
+	
+	
+	public Reword(int r_num, String r_title, String r_detail, int r_price, int r_depay, int c_num) {
+		super();
+		this.r_num = r_num;
+		this.r_title = r_title;
+		this.r_detail = r_detail;
+		this.r_price = r_price;
+		this.r_depay = r_depay;
+		this.c_num = c_num;
+	}
+
+
 	public int getR_num() {
 		return r_num;
 	}

@@ -14,7 +14,29 @@ public class Member implements Serializable {
 	private String m_add;
 	private int c_num;
 	
+	public Member() {}
 	
+	
+	
+	
+	public Member(int m_mun, String m_name, String m_id, String m_pw, String m_pno, String m_email, String m_acc,
+			int m_ownpoint, String m_add, int c_num) {
+		super();
+		this.m_mun = m_mun;
+		this.m_name = m_name;
+		this.m_id = m_id;
+		this.m_pw = m_pw;
+		this.m_pno = m_pno;
+		this.m_email = m_email;
+		this.m_acc = m_acc;
+		this.m_ownpoint = m_ownpoint;
+		this.m_add = m_add;
+		this.c_num = c_num;
+	}
+
+
+
+
 	public int getM_mun() {
 		return m_mun;
 	}

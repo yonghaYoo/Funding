@@ -14,6 +14,27 @@ public class Funding implements Serializable {
 	private int f_card_4;
 	private int r_num;
 	private int m_num;
+	
+	public Funding() {}
+	
+	
+	public Funding(int f_num, int f_resday, int f_price, int f_amount, String f_readd, int f_card_1, int f_card_2,
+			int f_card_3, int f_card_4, int r_num, int m_num) {
+		super();
+		this.f_num = f_num;
+		this.f_resday = f_resday;
+		this.f_price = f_price;
+		this.f_amount = f_amount;
+		this.f_readd = f_readd;
+		this.f_card_1 = f_card_1;
+		this.f_card_2 = f_card_2;
+		this.f_card_3 = f_card_3;
+		this.f_card_4 = f_card_4;
+		this.r_num = r_num;
+		this.m_num = m_num;
+	}
+
+
 	public int getF_num() {
 		return f_num;
 	}
