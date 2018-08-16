@@ -37,7 +37,7 @@
 			<img  src="img/main4.jpg">
 		</div>
 		<div id="mainImage">
-				
+				<img  src="img/main5.jpg">
 			<div	id="mainText">
 				<h1>
 					DDU DU DDU DU 
