@@ -111,7 +111,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -130,7 +130,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -149,7 +149,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -168,7 +168,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -187,7 +187,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -206,7 +206,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -225,7 +225,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg">
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -244,7 +244,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -263,7 +263,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -282,7 +282,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -301,7 +301,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -320,7 +320,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>
@@ -339,7 +339,7 @@
 				
 				<div class="contents">
 					<div class="contentsimg">
-						<img src="img/tumb01.jpg">
+						<a><img src="img/tumb01.jpg"></a>
 					</div>
 					<div class="contentstext">
 						<h3>&nbsp;&nbsp;컨텐츠 제목</h3><br><br>

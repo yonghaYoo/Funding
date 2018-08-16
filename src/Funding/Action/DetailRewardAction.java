@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Funding.Controller.ActionFoward;
 
-public class DetailRewordAction implements Action {
+public class DetailRewardAction implements Action {
 
 	@Override
 	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
