@@ -1,5 +1,7 @@
 package Funding.Mapper;
 
-public interface ContentsMapper {
+import Funding.Bean.Contents;
 
+public interface ContentsMapper {
+Contents DetailContents(int c_num);
 }
