@@ -30,7 +30,7 @@ public class ContentsDao {
 		return new SqlSessionFactoryBuilder().build(in);
 	}
 public Contents DetailContents(int c_num){
-	SqlSession sqlSession = getSqlSessionFactory().openSession();
+	SqlSession sqlSession = getSqlSessionFactory().openSession(); //공장 문 열고
 	Contents contents = new Contents();
 	try {
 		contents = sqlSession.getMapper(ContentsMapper.class).DetailContents(c_num);
@@ -38,7 +38,7 @@ public Contents DetailContents(int c_num){
 	} catch (Exception e) {
 		e.printStackTrace();
 	}finally {
-		sqlSession.close();
+		sqlSession.close(); //문 닫음
 	}
 	return contents;
 	

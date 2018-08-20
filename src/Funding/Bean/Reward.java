@@ -2,7 +2,7 @@ package Funding.Bean;
 
 import java.io.Serializable;
 
-public class Reword implements Serializable {
+public class Reward implements Serializable {
 	private int r_num;
 	private String r_title;
 	private String r_detail;
@@ -10,10 +10,10 @@ public class Reword implements Serializable {
 	private int r_depay;
 	private int c_num;
 	
-	public Reword() {}
+	public Reward() {}
 	
 	
-	public Reword(int r_num, String r_title, String r_detail, int r_price, int r_depay, int c_num) {
+	public Reward(int r_num, String r_title, String r_detail, int r_price, int r_depay, int c_num) {
 		super();
 		this.r_num = r_num;
 		this.r_title = r_title;

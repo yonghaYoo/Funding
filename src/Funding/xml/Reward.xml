@@ -4,7 +4,10 @@
 
 <mapper namespace="Funding.Mapper.RewordMapper">		<!-- 이렇게 되면 같은 경로에 BoardMapper 인터페이스가 필요하다. -->
 	<cache />
-	
+	<select id="DetailRewardList" parameterType="int" resultType="Funding.Bean.Reward">
+	select * from Reward
+	where c_num = #{c_num}
+	</select>
 	<!-- <select id="listReply" resultType="Reply" parameterType="int">
 		select * from Reply where seq=#{seq}
 	</select> -->

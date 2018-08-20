@@ -5,3 +5,4 @@ import Funding.Bean.Contents;
 public interface ContentsMapper {
 Contents DetailContents(int c_num);
 }
+//contents Mapper
