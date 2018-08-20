@@ -29,7 +29,7 @@ public class AllController extends HttpServlet {
     	
     	Action action = null;
     	ActionFoward forward = null;
-    	
+    	System.out.println("wow");
     	
     	
     }
