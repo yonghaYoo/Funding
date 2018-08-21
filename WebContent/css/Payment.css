@@ -1,0 +1,575 @@
+@charset "UTF-8";
+
+body{
+	margin:0 auto;
+	width:100%;
+	background-image: url("../img/patt13.jpg");
+	
+}
+
+p{
+	font-size: 16px;	
+	letter-spacing: -0.5px;
+	line-height: 32px;
+	font-family:Nanum Gothic', sans-serif;
+	
+}
+
+header{
+		width:100%;
+		height: 80px;
+		position: fixed;
+		background-color: white;
+		box-shadow: 0px 0px 15px -5px #8a8a8a;
+		float:left;
+	}
+	
+	header #title{
+		font-size: 25px;
+		display:inline-block;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	
+	#title h3{
+		display: inline;
+	}
+	
+	header #loginList{
+		float:right;
+		width: 350px;
+		height: 40px;
+		margin-top:20px;
+		margin-right:30px;
+		padding: 0;
+	}
+	
+	#loginList div{
+		width: 100px;
+		height: 40px;
+		margin: 0;
+		text-align: center;
+		float: left;
+		padding-top: 10px;
+	}
+	
+	#loginList div:last-child {
+	/* background: #32805a; */
+	border:3px solid #32805a;
+	height: 33px;
+	transition:0.3s;
+}	
+
+#loginList div:last-child:hover{
+	background-color: #32805a;
+	color:white;
+	border-radius: 30px 30px 30px 30px;
+}
+
+#wrapper{
+	width:80%;
+	margin:0 auto;
+	background-color: white;
+}
+
+#f_title{
+	width:100%;
+	height: 350px;
+	background-image: url("../img/DetailMain01.jpg");
+}
+
+#backPage{
+	position:absolute;
+	top:100px;
+	left:3%;
+	width:150px;
+	height: 30px;
+}
+#backPage p{
+	float:left;
+	margin-top:8px;
+	margin-left:5px;
+}
+#backPage img{
+	padding:10px;
+	max-width: 25px;
+	float:left;
+}
+#f_maintitle{
+	width:65%;
+	height: 300px;
+	display: inline-block;
+	margin-left: 18%;
+/* 	margin-top:100px; */
+	text-align: center;
+	font-size: 48px;
+	 font-family: 'Kaushan Script', cursive;
+	/* font-family: 'Gugi', cursive; */
+	color:white;
+}
+
+#f_maintitle h1{
+	margin-bottom: 0;
+	/* margin-top:13%; */
+	margin-top:8%;
+	
+}
+
+#indicater{
+	width:60%;
+	height: 200px;
+	margin:0 auto;
+	
+}
+
+#indiwrapper{
+	margin:0 auto;
+	height: 100%;
+	width:80%;
+	padding-left: 7%;
+	
+}
+.indi{
+	width:25%;
+	height: 90%;
+	display: inline-block;
+	border-radius: 300px;
+	text-align: center;
+	margin-top: 5%; 
+	border: 2px solid #e0e0e0;
+	transition:0.3s;
+}
+
+.indi:first-child{
+	background-color: #14a085;
+	color:white;
+	box-shadow: 5px 5px 10px #a8a8a8;
+	border: 2px solid #14a085;
+}
+
+
+.indi:hover{
+	background-color: #14a085;
+	color:white;
+	box-shadow: 5px 5px 10px #a8a8a8;
+	border: 2px solid #14a085;
+}
+
+.indi p{
+	margin-top:73px;
+	font-size: 25px;
+	font-family: 'Gothic A1', sans-serif;
+}
+
+.line{
+	width:9%;
+	border-top: 2px solid #e0e0e0;;
+	display: inline-block;
+}
+
+#selectReward{
+	width:100%;
+	height: 1200px;
+	margin-top:70px;
+	border-top: 2px solid black;
+	display: block;
+}
+
+#selectReward h2{
+	font-size: 36px;
+	margin-left:3%;
+}
+
+.select{
+	width:93%;
+	height: 220px;
+	margin-left:3%;
+	margin-bottom: 20px;
+	border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px #f0f0f0;
+}
+
+.check{
+	float:left;
+	width:10%;
+}
+
+.rewardText{
+	float:left;
+	width:80%;
+}
+
+.rewardText h4{
+	font-size: 24px;
+	margin-top:20px;
+	font-family: 'Nanum Gothic', sans-serif;
+	margin-bottom: 5px;
+}
+
+.rewardText p{
+	font-size: 18px;
+	margin:0;
+	margin-bottom: 5px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+.rewardText hr{
+	margin-top:20px;
+	margin-bottom: 25px;
+}
+
+
+
+.rewardText p:nth-child(2n){
+	color:#a8a8a8;
+	
+}
+.check input[type="checkbox"] {
+    display:none;
+}
+.check input[type="checkbox"] + label span {
+ 	display:inline-block;
+    width:30px;
+    height:30px;
+    margin-top:70%;
+    margin-left:40%;
+    vertical-align:middle;
+    background:url(../img/check.png);
+    cursor:pointer;
+   transition:0.3s;
+}
+.check input[type="checkbox"]:checked + label span {
+    background:url(../img/checked.png);
+} 
+
+.check input[type="checkbox"]:hover + label span {
+    background:url(../img/checked.png);
+} 
+
+
+
+#totalPrice{
+	border-top: 1px solid black;
+	width:93%;
+	height: 300px;
+	margin-top:60px;
+	margin-left:3%;
+	text-align: center;
+	
+}
+
+#totalPrice p{
+	display: inline-block;
+	font-size: 24px;
+	margin-left: 20px;
+	margin-top:60px;
+	margin-bottom:60px;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+#totalPrice p b{
+	text-decoration: underline;
+	color:#14a085;
+}
+
+#nextButton{
+	width:13%;
+	height: 50px;
+	background-color: #14a085;
+	color:white;
+	font-size: 24px;
+	font-weight: bold;
+	padding-top:18px;
+	margin: 0 auto;
+}
+
+
+#paywrap{
+	display: none;
+	width:100%;
+	height: 2000px;
+	margin-top:70px;
+	/* border-top: 2px solid black; */
+	font-family:Nanum Gothic, sans-serif;
+}
+
+#paymentInfo{
+	width:100%;
+	height: 600px;
+	
+}
+
+#obj_price{
+	width: 70%;
+	height:280px;
+	margin-left:15%;
+	border-top: 2px solid black;
+}
+
+#paymentInfo h2{
+	font-size: 28px;
+	margin-bottom: 60px;
+}
+
+#obj_price p{
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top:10px;
+}
+
+#obj_price p:nth-child(2n){
+	color:#14a085;
+}
+
+#obj_price p:nth-child(3n){
+	color:#8a8a8a;
+}
+
+#obj_price p:nth-child(4n){
+	display: inline-block;
+	color:#14a085;
+	float:right;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#depay{
+	width: 70%;
+	margin-left:15%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#depay h2{
+	display: inline-block;
+	margin-top:40px;
+	margin-bottom: 40px;
+}
+
+#depay p{
+	float:right;
+	margin-top:40px;
+	margin-bottom:40px;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+	color:#14a085;
+}
+#finalPrice {
+	width: 70%;
+	margin-left:15%;
+	margin-top:30px;
+}
+
+#finalPrice h1{
+	color:#14a085;
+	font-size: 36px;
+	display: inline-block;
+}
+
+#finalPrice h1:last-child{
+	float: right;
+}
+
+#deInfo{
+		width: 70%;
+		height:700px;
+		margin:0 auto;
+}
+
+
+
+#deInfo h2{
+	font-size: 28px;
+	margin-bottom: 60px;
+}
+
+#deInfo h4{
+	font-size: 24px;
+	color:#a8a8a8;
+}
+
+
+input[type="text"]{
+	background-image:url("../img/textbox.png");
+	width:215px;
+	height:30px;
+	border: none;
+	border-bottom: 3px solid 	#14a085;
+	outline-width: 0;
+	transition:0.3s;
+}
+
+input[type="text"]:focus{
+	box-shadow: 0px 10px 10px #e8e8e8;
+}
+#deform{
+	width:70%;
+	height: 100%;
+	float: left;
+}
+
+#dewrap{
+	width:100%;
+	height: 150px;
+}
+
+#dename{
+	height:100%;
+	width:50%;
+	float:left;
+}
+
+#depno{
+	height: 100%;
+	width: 50%;
+	float:left;
+}
+
+#address input[type="text"]{
+	width: 590px;
+}
+
+#demessage input[type="text"]{
+	width:590px;
+}
+#deguied{
+	width:30%;
+	height: 100%;
+	float:left;
+}
+
+#deguied p{
+	font-size: 12px;
+}
+
+#payInfo{
+	width:70%;
+	height:400px;
+	margin:0 auto;
+	background-color: white;
+}
+
+#payInfo h4{
+	font-size: 28px;
+}
+
+#payform{
+	width:70%;
+	height: 500px;
+	float:left;
+}
+
+#payform p{
+	font-size: 24px;
+	color:#a8a8a8;
+	font-weight: bold;
+}
+#payguied{
+	width:30%;
+	height: 100%;
+	float:left;
+}
+
+#cardnum{
+	width:50%;
+	float:left;
+}
+
+#cardnum [type="text"]{
+	width:50px;
+	margin-right: 20px;
+}
+
+#cardnum p{
+	margin-right:30%;
+	display: inline-block;
+}
+
+#carddate {
+	width:50%;
+	float:left;
+}
+
+#carddate [type="text"]{
+	width:100px;
+	margin-right: 20px;
+}
+
+#paywrap2{
+	width:100%;
+	margin-top:200px;
+}
+
+#cardpw{
+	width:40%;
+	float:left;
+	margin-right: 75px;
+}
+
+#cardpw [type="text"]{
+	width:50px;
+}
+
+#birth{
+	width:45%;
+	float:left;
+}
+
+#subwrap{
+	width:100%;
+	background-color: white;
+}
+
+#payguied {
+	font-size: 12px;
+	font-family:Nanum Gothic, sans-serif;
+}
+
+#paysubmit{
+	border-top: 1px solid black;
+	width:100%;
+	height: 200px;
+	float: left;
+}
+
+#back{
+		width:139px;
+		height: 50px;
+		background-color: #14a085;
+		font-size: 24px;
+		color:white;
+		font-weight: bold;
+	    padding-top:18px; 
+		flaot:left;
+		display: inline-block;
+		text-align: center;
+		margin-top: 50px;
+}
+
+#paysubm{
+	width:160px;
+	height:68px;
+    margin-left:30%;
+	margin-top:70px;
+	background-color: #14a085;
+	border: none;
+	font-size: 22px;
+	font-weight: bold;
+	color:white;
+	display: inline-block;
+}
+
+
+
+footer{
+		width:100%;
+		height: 100px;
+		font-size: 12px;
+		float:left;
+		margin-top:50px;
+		background-color: gray;
+	}
+	footer div{
+		float:left;
+	}
