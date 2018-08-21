@@ -128,6 +128,7 @@
                   <h4>${Contents.c_goalper}%</h4>
                   <p>${Contents.c_sumprice}</p>
                   <p>${Contents.c_remday}일 남음</p>
+                  
                </div>
             </div>
             </c:forEach>
