@@ -10,7 +10,7 @@
 		<typeAlias type="Funding.Bean.Funding" alias="Funding"/>
 		<typeAlias type="Funding.Bean.FundingCancle" alias="FundingCancle"/>
 		<typeAlias type="Funding.Bean.Payment" alias="Payment"/>
-		<typeAlias type="Funding.Bean.Reword" alias="Reword"/>
+		<typeAlias type="Funding.Bean.Reward" alias="Reward"/>
 		
 		
 	</typeAliases>
@@ -30,7 +30,7 @@
 		<mapper resource="Funding/xml/FundingCancle.xml"/>
 		<mapper resource="Funding/xml/Member.xml"/>
 		<mapper resource="Funding/xml/Payment.xml"/>
-		<mapper resource="Funding/xml/Reword.xml"/>
+		<mapper resource="Funding/xml/Reward.xml"/>
 		
 	</mappers>
 	

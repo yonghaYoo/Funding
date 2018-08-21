@@ -5,11 +5,16 @@
 <mapper namespace="Funding.Mapper.ContentsMapper">		<!-- 이렇게 되면 같은 경로에 BoardMapper 인터페이스가 필요하다. -->
 	<cache />
 	<select id="DetailContents" parameterType="int" resultType="Contents">
-	select * from Contents
-	where c_cum = #{c_cum}
-<!-- contents sql -->
+		select * from Contents
+		where c_cum = #{c_cum}
 	</select>
-	<!-- <select id="listReply" resultType="Reply" parameterType="int">
-		select * from Reply where seq=#{seq}
-	</select> -->
+	
+	<select id="AllListContents" resultType="Contents" > 
+	select * from Contents
+	 </select>
+
+	<!-- contents sql -->
+
+	<!-- <select id="listReply" resultType="Reply" parameterType="int"> select 
+		* from Reply where seq=#{seq} </select> -->
 </mapper>

@@ -14,13 +14,22 @@ public class Contents implements Serializable {
 	private String c_dead;
 	private int c_goal;
 	private int c_sumprice;
+	private String c_thimg;
+	private int c_remday;
+	private int c_goalper;
+
 	
 	public Contents() { }
 	
-	
-	
+
+
+
+
+
+
 	public Contents(int c_num, String c_title, String c_cate, String c_titleimg, String c_intro, String c_text,
-			String c_midimg, String c_topimg, String c_dead, int c_goal, int c_sumprice) {
+			String c_midimg, String c_topimg, String c_dead, int c_goal, int c_sumprice, String c_thimg, int c_remday,
+			int c_goalper) {
 		super();
 		this.c_num = c_num;
 		this.c_title = c_title;
@@ -33,7 +42,54 @@ public class Contents implements Serializable {
 		this.c_dead = c_dead;
 		this.c_goal = c_goal;
 		this.c_sumprice = c_sumprice;
+		this.c_thimg = c_thimg;
+		this.c_remday = c_remday;
+		this.c_goalper = c_goalper;
+	
 	}
+
+
+
+
+
+
+
+
+	public int getC_goalper() {
+		return c_goalper;
+	}
+
+
+	public void setC_goalper(int c_goalper) {
+		this.c_goalper = c_goalper;
+	}
+
+	public String getC_thimg() {
+		return c_thimg;
+	}
+
+
+	public void setC_thimg(String c_thimg) {
+		this.c_thimg = c_thimg;
+	}
+
+
+
+	public int getC_remday() {
+		return c_remday;
+	}
+
+
+
+
+
+
+	public void setC_remday(int c_remday) {
+		this.c_remday = c_remday;
+	}
+
+
+
 
 
 

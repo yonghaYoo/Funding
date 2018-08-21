@@ -1,6 +1,8 @@
 package Funding.Controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Funding.Action.Action;
+import Funding.Action.AllListContentsAction;
 
 
 @WebServlet("*.do")
@@ -31,6 +34,24 @@ public class AllController extends HttpServlet {
     	ActionFoward forward = null;
     	System.out.println("wow");
     	
+    	
+    	if(command.equals("AllListContentsAction.do")){
+    		action = new AllListContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
+    	
+    	if(forward!=null){
+    		if(forward.isRedirect()){
+    			response.sendRedirect(forward.getPath());
+    		}else{
+    			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
+    			dispatcher.forward(request, response);
+    		}
+    	}
     	
     }
     
