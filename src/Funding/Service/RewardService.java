@@ -1,5 +1,6 @@
 package Funding.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.security.auth.message.callback.PrivateKeyCallback.Request;
@@ -16,16 +17,14 @@ public class RewardService {
 
 	
 	public static RewardService getInstance(){
+		dao= RewardDao.getInstance();
 		return service;
 	}
-public List<Reward>listDetailRewardList(HttpServletRequest request){
-	String str =request.getParameter("c_num");
-	int c_num=0;
-	if(str!=null){
-		c_num=Integer.parseInt(str);
-	}
+public List<Reward>listDetailRewardList(int c_num){
+
+	List<Reward> list = new ArrayList<Reward>();
 	
-	List<Reward> list = dao.DetailRewardList(c_num);
+	list = dao.DetailRewardList(c_num);
 	
 	return list;
 

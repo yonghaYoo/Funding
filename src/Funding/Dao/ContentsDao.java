@@ -51,4 +51,20 @@ public class ContentsDao {
          return list;
    }
    
+   public Contents DetailContents(int c_num){
+	   SqlSession sqlSession = getSqlSessionFactory().openSession();
+	   
+	   Contents contents = new Contents();
+	   
+	   try {
+		contents= sqlSession.getMapper(ContentsMapper.class).DetailContents(c_num);
+		   
+	} catch (Exception e) {
+		e.printStackTrace();
+	}finally {
+		sqlSession.close();
+	}
+	   return contents;
+   }
+   
 }

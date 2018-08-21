@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import Funding.Bean.Reward;
+import Funding.Mapper.RewardMapper;
 
 public class RewardDao {
 	private static RewardDao dao = new RewardDao();
@@ -36,7 +37,7 @@ public class RewardDao {
 		List<Reward> list = new ArrayList<Reward>();
 		
 		try {
-			list = dao.DetailRewardList(c_num);
+			list= sqlSession.getMapper(RewardMapper.class).DetailRewardList(c_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {

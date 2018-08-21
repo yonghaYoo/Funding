@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import Funding.Action.Action;
 import Funding.Action.AllListContentsAction;
+import Funding.Action.MovementDetailAction;
+import Funding.Action.MovementResAction;
 
 
 @WebServlet("*.do")
@@ -42,7 +44,22 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    	}
+    	}else if(command.equals("MovementDetailAction.do")){
+    		action = new MovementDetailAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("MovementResAction.do")){
+				action = new MovementResAction();
+				try{
+					forward =action.execute(request, response);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			}
+    	
     	
     	if(forward!=null){
     		if(forward.isRedirect()){

@@ -1,5 +1,8 @@
 package Funding.Mapper;
 
-public interface PaymentMapper {
+import java.util.List;
 
+import Funding.Bean.Payment;
+
+public interface PaymentMapper {
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <% %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -73,10 +75,11 @@
 						<label for="r_num"><span></span>	</label>
 					</div>
 					<div class="rewardText">
-						<h4>17900원 펀딩합니다</h4>
+						<h4>${Reward.r_price} 펀딩합니다</h4>
 						<hr/>
-						<p><b>[리워드 제목]</b></p>
-						<p>[리워드 상세 설명]</p>
+						<p><b>
+						${Reward.r_title}</b></p>
+						<p>${Reward.r_detail}</p>
 						<p>배송비 없음</p>
 					</div>
 				</div>
@@ -110,8 +113,10 @@
 				</div>
 				<!-- 리워드 체크 끝 -->
 				<div id = "totalPrice">
-					<p>(title) 에</p>
-					<p><b>(거래금액)</b> 를 펀딩합니다. </p>
+					<p>
+					${Contents.c_title} 에</p>
+					<p><b>(거래금액)
+					${Reward.r_price}</b> 를 펀딩합니다. </p>
 					<div id="nextButton"> 다음단계로</div>
 				</div>
 			
@@ -123,8 +128,8 @@
 			<section id="paymentInfo">
 				<div id="obj_price">
 					<h2>수량 및 가격</h2>
-					<p>[리워드 제목]</p>
-					<p>[리워드 상세 설명]</p>
+					<p>[리워드 제목]${Contents.c_title}</p>
+					<p>[리워드 상세 설명]${Reward.r_detail}</p>
 					<p>수량 : 1개&nbsp; &nbsp;&nbsp;64000원</p>
 				</div>
 				<div id ="depay">

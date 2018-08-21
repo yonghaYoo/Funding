@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%
+
+    %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -39,11 +43,11 @@
 		<div id ="mainImage">
 			<img src="img/DetailMain01.jpg">
 			<div id="mainText">
-				<h1>컨텐츠 제목</h1>
-				<p>I'm hungry, but i'm still working now, i want sugar</p>
+				<h1>${Contents.c_title}</h1>
+				<p>${Contents.c_intro }</p>
 			</div>
 			<div id="fundingbutton">
-				<h1>펀딩하기</h1>
+				<a href="MovementResAction.do?c_num=${Contents.c_num}"><h1>펀딩하기</h1></a>
 			</div>
 		</div>
 	</section>
@@ -57,68 +61,25 @@
 			<hr/>
 			<h1>헤드문구</h1>
 			<p>
-				난 너의 위성 네 주윌 맴돌지 그렇다고 네가 태양은 아니니<br>
-				너의 멋대로 중심이 돼 제멋대로 굴면 안 돼 <br>
-				<br>
-				어떻게 한순간의 떨림이 소리 없이 너의 두 눈을 가리니 <br>
-				너의 뜻대로 흘러가네 내게 상처를 주면 안 돼<br>
-				<br>
-				넌 네 생각만 하지 그래 뭐 그게 참 당연한 듯이<br>
-				어리석게 너에게만 맞춰 왔던 게 날 괴롭히네 마지막까지 외롭게 해<br>
-				<br>
-				할 말이 없어 Go away 설명이 더 필요해?<br>
-				화를 내도 내 입만 아프다니까<br>
-				넌 멋대로만 해<br>
-				<br>
-				난 언제나 너너너너 해넌 언제나 나나나나 해<br>
-				움띠야이야 띠야이야 (네 멋대로 중심이 돼)<br>
-				넌 너만 생각해 그럴 거면 너너너나 해 에이에 <br>
-				움띠야이야 띠야이야 (네 멋대로 굴면 안 돼)<br>
-				멋대로만 해 AY<br>
-
-				밤을 새워 버렸어 차갑게 식은 머리도<br>
-				너의 태도가 이해 안 돼 이젠 조금씩 지쳐 가네<br>
-				<br>
+				${Contents.c_text}
 		
 			</p>
 		</div>
 		<div id="rewordList">
+		
+		<c:forEach var="wow" items="${list}">
 			<div class="reword">
-				<h1>리워드명</h1>
+				<h1>${wow.r_title}</h1>
 				<hr/>
-				<h4>48000</h4>
+				<h4>
+				${wow.r_price}</h4>
 				<p>
-				나는 지금 배가고픈지 안고픈지 잘 모르겠다.<br>
-				시간이 밥을 먹을 시간이긴한데 점심을 배부르게 먹어서<br> 
-				나는 지금 배가 안고픈것같다. 아닌가 배가 고픈건가<br>
+				${wow.r_detail}
 				</p>
 				<hr/>
 			</div>
-			
-			<div class="reword">
-				<h1>리워드명</h1>
-				<hr/>
-				<h4>48000</h4>
-				<p>
-				나는 지금 배가고픈지 안고픈지 잘 모르겠다.<br>
-				시간이 밥을 먹을 시간이긴한데 점심을 배부르게 먹어서<br> 
-				나는 지금 배가 안고픈것같다. 아닌가 배가 고픈건가<br>
-				</p>
-				<hr/>
-			</div>
-			
-			<div class="reword">
-				<h1>리워드명</h1>
-				<hr/>
-				<h4>48000</h4>
-				<p>
-				나는 지금 배가고픈지 안고픈지 잘 모르겠다.<br>
-				시간이 밥을 먹을 시간이긴한데 점심을 배부르게 먹어서<br> 
-				나는 지금 배가 안고픈것같다. 아닌가 배가 고픈건가<br>
-				</p>
-				<hr/>
-			</div>
-			
+		</c:forEach>
+		
 		</div>
 		<div id="img">
 			<img  src="img/DetailLong.jpg">
