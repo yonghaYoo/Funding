@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Funding.Bean.Contents;
-import Funding.Bean.Payment;
+import Funding.Bean.Funding;
 import Funding.Bean.Reward;
 import Funding.Controller.ActionFoward;
 import Funding.Service.ContentsService;
-import Funding.Service.PaymentService;
+import Funding.Service.FundingService;
 import Funding.Service.RewardService;
 
 

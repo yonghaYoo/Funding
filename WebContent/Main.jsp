@@ -22,13 +22,17 @@
       
       <div id="loginList">
          <div>
+         	<a href="MovementLoginAction.do">
             로그인
+            </a>
          </div>
          <div>
             회원가입
          </div>
          <div>
+         	<a href="MovementAddContentsAction.do">
             컨텐츠 추가
+            </a>
          </div>
       </div>
    </header>
@@ -43,7 +47,7 @@
             <h1>
                DDU DU DDU DU 
             </h1>
-            착한얼굴에 그렇지 못한태도 강렬한 몸매속 가려진 볼륨은 두배로
+            착한얼굴에 그렇지 못한태도 가녀린 몸매속 가려진 볼륨은 두배로
          </div>
          <div id="shadows">
          </div>
@@ -113,7 +117,7 @@
             <div class="contents">
                <div class="contentsimg">
                   
-                  <a href="MoveDetailAction.do?c_num=${Contents.c_num}"><img src="${Contents.c_thimg}"></a>
+                  <a href="MovementDetailAction.do?c_num=${Contents.c_num}"><img src="${Contents.c_thimg}"></a>
                   <!-- img경로 설정 -->
                </div>
                <div class="contentstext">

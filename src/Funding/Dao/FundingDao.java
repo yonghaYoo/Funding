@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class FundingDao {
 	private static FundingDao dao = new FundingDao();
 	
-	public static FundingDao getInstatnce() {
+	public static FundingDao getInstance() {
 		return dao;
 	}
 	

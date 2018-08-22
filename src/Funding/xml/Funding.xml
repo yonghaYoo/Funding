@@ -4,7 +4,7 @@
 
 <mapper namespace="Funding.Mapper.FundingMapper">		<!-- 이렇게 되면 같은 경로에 BoardMapper 인터페이스가 필요하다. -->
 	<cache />
-
+	
 	
 
 	<!-- <select id="listReply" resultType="Reply" parameterType="int">
