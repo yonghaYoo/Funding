@@ -3,7 +3,7 @@ package Funding.Bean;
 import java.io.Serializable;
 
 public class Member implements Serializable {
-	private int m_mun;
+	private int m_num;
 	private String m_name;
 	private String m_id;
 	private String m_pw;
@@ -16,13 +16,11 @@ public class Member implements Serializable {
 	
 	public Member() {}
 	
-	
-	
-	
-	public Member(int m_mun, String m_name, String m_id, String m_pw, String m_pno, String m_email, String m_acc,
+
+	public Member(int m_num, String m_name, String m_id, String m_pw, String m_pno, String m_email, String m_acc,
 			int m_ownpoint, String m_add, int c_num) {
 		super();
-		this.m_mun = m_mun;
+		this.m_num = m_num;
 		this.m_name = m_name;
 		this.m_id = m_id;
 		this.m_pw = m_pw;
@@ -37,11 +35,11 @@ public class Member implements Serializable {
 
 
 
-	public int getM_mun() {
-		return m_mun;
+	public int getM_num() {
+		return m_num;
 	}
-	public void setM_mun(int m_mun) {
-		this.m_mun = m_mun;
+	public void setM_num(int m_num) {
+		this.m_num = m_num;
 	}
 	public String getM_name() {
 		return m_name;

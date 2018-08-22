@@ -6,7 +6,6 @@ public class Contents implements Serializable {
 	private int c_num;
 	private String c_title;
 	private String c_cate;
-	private String c_titleimg;
 	private String c_intro;
 	private String c_text;
 	private String c_midimg;
@@ -21,20 +20,13 @@ public class Contents implements Serializable {
 	
 	public Contents() { }
 	
-
-
-
-
-
-
-	public Contents(int c_num, String c_title, String c_cate, String c_titleimg, String c_intro, String c_text,
+	public Contents(int c_num, String c_title, String c_cate, String c_intro, String c_text,
 			String c_midimg, String c_topimg, String c_dead, int c_goal, int c_sumprice, String c_thimg, int c_remday,
 			int c_goalper) {
 		super();
 		this.c_num = c_num;
 		this.c_title = c_title;
 		this.c_cate = c_cate;
-		this.c_titleimg = c_titleimg;
 		this.c_intro = c_intro;
 		this.c_text = c_text;
 		this.c_midimg = c_midimg;
@@ -111,12 +103,7 @@ public class Contents implements Serializable {
 	public void setC_cate(String c_cate) {
 		this.c_cate = c_cate;
 	}
-	public String getC_titleimg() {
-		return c_titleimg;
-	}
-	public void setC_titleimg(String c_titleimg) {
-		this.c_titleimg = c_titleimg;
-	}
+
 	public String getC_intro() {
 		return c_intro;
 	}

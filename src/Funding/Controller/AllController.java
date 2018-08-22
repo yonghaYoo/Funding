@@ -13,6 +13,10 @@ import Funding.Action.Action;
 import Funding.Action.AllListContentsAction;
 import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
+import Funding.Action.InsertContentsAction;
+import Funding.Action.LoginAction;
+import Funding.Action.MovementAddContentsAction;
+import Funding.Action.MovementLoginAction;
 
 
 @WebServlet("*.do")
@@ -44,22 +48,35 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    	}else if(command.equals("MovementDetailAction.do")){
-    		action = new MovementDetailAction();
+    	}else if(command.equals("LoginAction.do")) {
+    		action = new LoginAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("MovementResAction.do")){
-				action = new MovementResAction();
-				try{
-					forward =action.execute(request, response);
-				}catch(Exception e){
-					e.printStackTrace();
-				}
+    	}else if(command.equals("MovementLoginAction.do")) {
+    		action = new MovementLoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-    	
+    	}else if(command.equals("MovementAddContentsAction.do")) {
+    		action = new MovementAddContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("InsertContentsAction.do")) {
+    		action = new InsertContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}
     	
     	if(forward!=null){
     		if(forward.isRedirect()){

@@ -8,6 +8,15 @@
 	select * from Reward
 	where c_num = #{c_num}
 	</select>
+	
+	<insert id="InsertReward" parameterType="Reward">
+		insert into reward(
+			c_num,r_num,r_price,r_title,r_detail
+		)values(
+			#{c_num},reward_r_num.nextval,#{r_price},#{r_title},#{r_detail}
+		)
+	</insert>
+	
 	<!-- <select id="listReply" resultType="Reply" parameterType="int">
 		select * from Reply where seq=#{seq}
 	</select> -->

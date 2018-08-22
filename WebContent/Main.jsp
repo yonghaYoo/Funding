@@ -29,11 +29,13 @@
          <div>
             회원가입
          </div>
+         <a href="MovementAddContentsAction.do">
          <div>
          	<a href="MovementAddContentsAction.do">
             컨텐츠 추가
             </a>
          </div>
+         </a>
       </div>
    </header>
    
@@ -117,7 +119,9 @@
             <div class="contents">
                <div class="contentsimg">
                   
+
                   <a href="MovementDetailAction.do?c_num=${Contents.c_num}"><img src="${Contents.c_thimg}"></a>
+
                   <!-- img경로 설정 -->
                </div>
                <div class="contentstext">

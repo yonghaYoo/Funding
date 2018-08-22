@@ -10,5 +10,7 @@ Contents DetailContents(int c_num);
 
 List<Funding.Bean.Contents> AllListContents();
 
+int InsertContents(Contents contents);
+
 }
 //contents Mapper
