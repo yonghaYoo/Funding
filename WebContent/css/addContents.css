@@ -46,13 +46,13 @@ header{
 	
 	#loginList div:last-child {
 	/* background: #32805a; */
-	border:3px solid #32805a;
+	border:3px solid #14a085;
 	height: 33px;
 	transition:0.3s;
 }	
 
 #loginList div:last-child:hover{
-	background-color: #32805a;
+	background-color: #14a085;
 	color:white;
 	border-radius: 30px 30px 30px 30px;
 }

@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import Funding.Action.Action;
 import Funding.Action.AllListContentsAction;
+import Funding.Action.InsertContentsAction;
+import Funding.Action.LoginAction;
+import Funding.Action.MovementAddContentsAction;
+import Funding.Action.MovementLoginAction;
 
 
 @WebServlet("*.do")
@@ -37,6 +41,34 @@ public class AllController extends HttpServlet {
     	
     	if(command.equals("AllListContentsAction.do")){
     		action = new AllListContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("LoginAction.do")) {
+    		action = new LoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("MovementLoginAction.do")) {
+    		action = new MovementLoginAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("MovementAddContentsAction.do")) {
+    		action = new MovementAddContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("InsertContentsAction.do")) {
+    		action = new InsertContentsAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

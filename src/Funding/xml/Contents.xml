@@ -6,15 +6,20 @@
 	<cache />
 	<select id="DetailContents" parameterType="int" resultType="Contents">
 		select * from Contents
-		where c_cum = #{c_cum}
+		where c_num = #{c_num}
 	</select>
 	
 	<select id="AllListContents" resultType="Contents" > 
 	select * from Contents
 	 </select>
 
-	<!-- contents sql -->
+	<insert id="InsertContents" parameterType="Contents" >
+		insert into contents(
+			c_num,c_title,c_cate,c_intro,c_text,c_midimg,c_topimg,c_dead,c_goal,c_thimg
+		)values(
+			#{c_num},#{c_title},#{c_cate},#{c_intro},#{c_text},#{c_midimg},#{c_topimg},#{c_dead},#{c_goal},#{c_thimg}
+		)
+		
+	</insert>	
 
-	<!-- <select id="listReply" resultType="Reply" parameterType="int"> select 
-		* from Reply where seq=#{seq} </select> -->
 </mapper>

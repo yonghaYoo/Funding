@@ -14,12 +14,7 @@ public class DetailRewordAction implements Action {
 	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		RewardService service = RewardService.getInstance();
 		
-		List<Reward> list = service.listDetailRewardList(request);
-		request.setAttribute("list", list);
-		
-		ActionFoward foward = new ActionFoward();
-		foward.setPath("경로");
-		foward.setRedirect(false);
+	
 		
 		return null;
 	}
