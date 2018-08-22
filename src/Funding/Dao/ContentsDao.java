@@ -51,20 +51,41 @@ public class ContentsDao {
          return list;
    }
    
-   public Contents DetailContents(int c_num){
+   public Contents DetailContents(int c_num) {
 	   SqlSession sqlSession = getSqlSessionFactory().openSession();
-	   
 	   Contents contents = new Contents();
 	   
 	   try {
-		contents= sqlSession.getMapper(ContentsMapper.class).DetailContents(c_num);
-		   
+		contents = sqlSession.getMapper(ContentsMapper.class).DetailContents(c_num);
 	} catch (Exception e) {
 		e.printStackTrace();
 	}finally {
 		sqlSession.close();
 	}
+	   
 	   return contents;
+   }
+   
+   
+   public int InsertContents(Contents contents) {
+	   SqlSession sqlSession = getSqlSessionFactory().openSession();
+	   
+	   int re = -1;
+	   
+	   try {
+		   re = sqlSession.getMapper(ContentsMapper.class).InsertContents(contents);
+		   if(re>0) {
+			   sqlSession.commit();
+		   }else {
+			   sqlSession.rollback();
+		   }
+	   } catch (Exception e) {
+		   e.printStackTrace();
+	   }finally {
+		   sqlSession.close();
+	}
+	   
+	   return re;
    }
    
 }

@@ -1,5 +1,9 @@
 package Funding.Mapper;
 
-public interface MemberMapper {
+import java.util.List;
 
+import Funding.Bean.Member;
+
+public interface MemberMapper {
+	List<Member> listMember();
 }
