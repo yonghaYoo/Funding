@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+ <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -53,15 +55,15 @@
 	
 <!-- 	<section id= "allWarp"> -->
 	<!-- 기본정보 -->
-		<form action="" method="post" enctype="multipart/form-data">
+		
 			<div id = "basicInfoWrap">
-			
+				<form action="InsertContentsAction.do" method="post" enctype="multipart/form-data">
 				<div class="info">
 					<h2>프로젝트 제목</h2>
 					<div>프로젝트를 잘 나타내거나 흥미를 갖게 할 수 있는 멋진 제목을 입력해보세요. <br>
 							  프로젝트 페이지와 메인페이지에 사용됩니다.
 					</div>
-					<input type="text" id="title" name="c_name">
+					<input type="text" id="title" name="c_title">
 				</div>
 				
 				<div class="info">
@@ -135,11 +137,13 @@
 				</div>
 				
 				<div id="submit">
+				 <input type="hidden" value=${member.c_num } name="c_num">
 					<input type="submit" id ="save" value="저장">
 					<div id="nextStep"><p>다음 단계</p></div>
 				</div>
+				</form>
 			</div>
-		</form>
+		
 	<!-- 기본정보 끝 -->
 	
 	<!-- 리워드 설정 -->
@@ -150,7 +154,7 @@
 					<h2>리워드 #1</h2>
 				</div>
 				<div class="reInfo">
-					
+						<input type="hidden" value=${member.c_num } name="c_num">
 					<p>
 						금액
 						<input type="number" id="rewardMoney" name="r_price">

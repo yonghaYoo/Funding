@@ -11,8 +11,6 @@
 		<typeAlias type="Funding.Bean.FundingCancle" alias="FundingCancle"/>
 		<typeAlias type="Funding.Bean.Payment" alias="Payment"/>
 		<typeAlias type="Funding.Bean.Reward" alias="Reward"/>
-		
-		
 	</typeAliases>
 	
 	<environments default="development">
@@ -25,13 +23,13 @@
 	</environments>
 	
 	<mappers>
+	
+		<mapper resource="Funding/xml/Member.xml"/>
 		<mapper resource="Funding/xml/Contents.xml"/>
 		<mapper resource="Funding/xml/Funding.xml"/>
 		<mapper resource="Funding/xml/FundingCancle.xml"/>
-		<mapper resource="Funding/xml/Member.xml"/>
 		<mapper resource="Funding/xml/Payment.xml"/>
 		<mapper resource="Funding/xml/Reward.xml"/>
-		
 	</mappers>
 	
 </configuration>
