@@ -81,7 +81,7 @@
 						<p><b>
 						${Contents.r_title}</b></p>
 						<p>${Contents.r_detail}</p>
-						<p>배송비 없음</p>
+						<p>배송비 : 0원</p>
 					</div>
 					<input type="hidden" id="contentsPrice" value="${Contents.r_price }">
 					</c:forEach>
