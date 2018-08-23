@@ -88,4 +88,25 @@ public class ContentsDao {
 	   return re;
    }
    
+   public int GoalPerContents(Contents contents) {
+	   SqlSession sqlSession = getSqlSessionFactory().openSession();
+	   
+	   int re = -1;
+	   
+	   try {
+		   re = sqlSession.getMapper(ContentsMapper.class).GoalPerContents(contents);
+		   if(re>0) {
+			   sqlSession.commit();
+		   }else {
+			   sqlSession.rollback();
+		   }
+	   } catch (Exception e) {
+		   e.printStackTrace();
+	   }finally {
+		   sqlSession.close();
+	}
+	   
+	   return re;
+   }
+   
 }

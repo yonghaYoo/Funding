@@ -12,5 +12,9 @@ List<Funding.Bean.Contents> AllListContents();
 
 int InsertContents(Contents contents);
 
+/*int RemDayContents(String c_dead);*/
+
+int GoalPerContents(Contents contents);
+
 }
 //contents Mapper

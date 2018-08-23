@@ -74,49 +74,26 @@
 						<input type="checkbox"  id="r_num" >
 						<label for="r_num"><span></span>	</label>
 					</div>
+					<c:forEach var="Contents" items="${list}">
 					<div class="rewardText">
-						<h4>${Reward.r_price} 펀딩합니다</h4>
+						<h4>${Contents.r_price} 펀딩합니다</h4>
 						<hr/>
 						<p><b>
-						${Reward.r_title}</b></p>
-						<p>${Reward.r_detail}</p>
-						<p>배송비 없음</p>
+						${Contents.r_title}</b></p>
+						<p>${Contents.r_detail}</p>
+						<p>배송비 : 0원</p>
 					</div>
+					<input type="hidden" id="contentsPrice" value="${Contents.r_price }">
+					</c:forEach>
 				</div>
 				
-				<div class="select">
-					<div class="check">
-						<input type="checkbox"  id="r_num1" >
-						<label for="r_num1"><span></span>	</label>
-					</div>
-					<div class="rewardText">
-						<h4>17900원 펀딩합니다</h4>
-						<hr/>
-						<p><b>[리워드 제목]</b></p>
-						<p>[리워드 상세 설명]</p>
-						<p>배송비 없음</p>
-					</div>
-				</div>
 				
-				<div class="select">
-					<div class="check">
-						<input type="checkbox"  id="r_num2" >
-						<label for="r_num2"><span></span>	</label>
-					</div>
-					<div class="rewardText">
-						<h4>17900원 펀딩합니다</h4>
-						<hr/>
-						<p><b>[리워드 제목]</b></p>
-						<p>[리워드 상세 설명]</p>
-						<p>배송비 없음</p>
-					</div>
-				</div>
 				<!-- 리워드 체크 끝 -->
 				<div id = "totalPrice">
 					<p>
 					${Contents.c_title} 에</p>
-					<p><b>(거래금액)
-					${Reward.r_price}</b> 를 펀딩합니다. </p>
+					<p>
+					<b>(거래금액)</b> 를 펀딩합니다. </p>
 					<div id="nextButton"> 다음단계로</div>
 				</div>
 			

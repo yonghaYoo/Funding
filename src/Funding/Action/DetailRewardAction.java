@@ -1,21 +1,21 @@
 package Funding.Action;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import Funding.Bean.Reward;
 import Funding.Controller.ActionFoward;
+import Funding.Service.RewardService;
 
-public class LogoutAction implements Action {
+public class DetailRewardAction implements Action {
 
 	@Override
 	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		request.getSession().invalidate();
+		RewardService service = RewardService.getInstance();
+
 		
-		ActionFoward forward = new ActionFoward();
-		
-		forward.setPath("AllListContentsAction.do");
-		forward.setRedirect(false);
-		return forward;
+		return null;
 	}
 
 }
