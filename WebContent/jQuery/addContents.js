@@ -19,18 +19,21 @@ $('#before').click(function(){
 	
 $('#newReward').click(function(){
 	count++;
+	
+	var s =$('.reInfo input:first-child').val();	
+	alert(s);
 	var html ='<div class="reWrap">';
-		html+='<form Action="" method="post">';
+		html+='<form>';
 		html+='<div class="reTitle"><h2>리워드 #'+count+'</h2></div>';
 		html+='<div class="reInfo">';
-		html+='<input type="hidden" value=${member.c_num } name="c_num">'
+		html+='<input type="hidden" value='+ s +' name="c_num">'
 		html+='<p>금액<input type="number" id="rewardMoney" name="r_price"></p>';
 		html+='<p>리워드명<input type="text" id="rewardTitle" name="r_title"></p>';
 		html+='<div>상세설명</div><textarea rows="6" cols="72" name="r_detail"></textarea></div>';
 		html+='<div class="delete"><img src="img/delete.png"></div>';
 		html+='<div class="resubmit"><input type="submit"  id="resubmit" value="리워드 저장"></div></form></div>';
 	
-		$('#newReward').before(html);
+		$('#newReward').before(html);	
 });
 
 
@@ -50,7 +53,23 @@ $('#newReward').click(function(){
 	});
 	
 	$('.indi:first-child').click(function(){
-		$('#settingRewardWrap').css('display','none');
+		$('#settingRewardWrap').css('display', 'none');
 		$('#basicInfoWrap').css('display','block');
-	})
+	});
+	
+	$('body').on('submit', '.reWrap form', function(){
+		alert("aa");
+		
+		$.ajax({
+			url:"InsertrewordAction.do",
+			type:'post',
+			datatype:'text',
+			data:$(this).serialize(),
+			success:function(){
+				alert("저장되었습니다. 추가를 원하시면 계속 추가해주세요");
+			}
+		
+		});
+		return false;
+	});
 });

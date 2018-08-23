@@ -60,6 +60,14 @@ public class Reward implements Serializable {
 	public void setC_num(int c_num) {
 		this.c_num = c_num;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Reward [r_num=" + r_num + ", r_title=" + r_title + ", r_detail=" + r_detail + ", r_price=" + r_price
+				+ ", r_depay=" + r_depay + ", c_num=" + c_num + "]";
+	}
+	
 	
 	
 }

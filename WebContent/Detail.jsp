@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%
-
-    %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -41,7 +39,7 @@
 	
 	<section id="first">
 		<div id ="mainImage">
-			<img src="img/DetailMain01.jpg">
+			<img src="receiveimg/${Contents.c_topimg }">
 			<div id="mainText">
 				<h1>${Contents.c_title}</h1>
 				<p>${Contents.c_intro }</p>
@@ -67,7 +65,20 @@
 		</div>
 		<div id="rewordList">
 		
-		<c:forEach var="wow" items="${list}">
+		<%-- <c:forEach var="wow" items="${list}">
+			<div class="reword">
+				<h1>${wow.r_title}</h1>
+				<hr/>
+				<h4>
+				${wow.r_price}</h4>
+				<p>
+				${wow.r_detail}
+				</p>
+				<hr/>
+			</div>
+		</c:forEach> --%>
+		
+		<c:forEach var="wow" items="${list2 }">
 			<div class="reword">
 				<h1>${wow.r_title}</h1>
 				<hr/>
@@ -82,7 +93,7 @@
 		
 		</div>
 		<div id="img">
-			<img  src="img/DetailLong.jpg">
+			<img  src="receiveimg/${Contents.c_midimg }">
 		</div>
 	</section>
 	

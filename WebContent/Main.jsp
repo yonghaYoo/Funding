@@ -43,6 +43,9 @@
       <div id="subImage">
          <img  src="img/main4.jpg">
       </div>
+      <div id="shadows">
+         </div>
+      
       <div id="mainImage">
             <img  src="img/main5.jpg">
          <div   id="mainText">
@@ -51,8 +54,7 @@
             </h1>
             착한얼굴에 그렇지 못한태도 가녀린 몸매속 가려진 볼륨은 두배로
          </div>
-         <div id="shadows">
-         </div>
+         
       </div>
       <div id="pattern">
       </div>
@@ -120,7 +122,7 @@
                <div class="contentsimg">
                   
 
-                  <a href="MovementDetailAction.do?c_num=${Contents.c_num}"><img src="${Contents.c_thimg}"></a>
+                  <a href="MovementDetailAction.do?c_num=${Contents.c_num}"><img src="receiveimg/${Contents.c_thimg}"></a>
 
                   <!-- img경로 설정 -->
                </div>

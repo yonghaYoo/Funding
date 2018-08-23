@@ -33,8 +33,8 @@ public class MovementDetailAction implements Action {
 		request.setAttribute("Contents", contents);
 		
 		List<Reward> list = service2.listDetailRewardList(c_num);
-		request.setAttribute("list", list);
-		
+		request.setAttribute("list2", list);
+		System.out.println(list.get(2).getR_num());
 		ActionFoward forward = new ActionFoward();
 		forward.setPath("Detail.jsp");
 		forward.setRedirect(false);

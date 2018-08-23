@@ -168,7 +168,7 @@ header{
 #img{
 	width:57%;
 	margin:0 auto;
-	height: 1464px;
+	height: 100%;
 	overflow: hidden;
 	margin-top: 50px;
 }

@@ -37,7 +37,7 @@ public class RewardDao {
 		List<Reward> list = new ArrayList<Reward>();
 		
 		try {
-
+			System.out.println(sqlSession.getMapper(RewardMapper.class));
 			list = sqlSession.getMapper(RewardMapper.class).DetailRewardList(c_num);
 
 		} catch (Exception e) {
@@ -65,6 +65,6 @@ public class RewardDao {
 			sqlSession.close();
 		}
 		
-		return 0;
+		return re;
 	}
 }

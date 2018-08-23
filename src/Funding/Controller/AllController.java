@@ -14,6 +14,7 @@ import Funding.Action.AllListContentsAction;
 import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
 import Funding.Action.InsertContentsAction;
+import Funding.Action.InsertrewordAction;
 import Funding.Action.LoginAction;
 import Funding.Action.MovementAddContentsAction;
 import Funding.Action.MovementLoginAction;
@@ -71,6 +72,20 @@ public class AllController extends HttpServlet {
 			}
     	}else if(command.equals("InsertContentsAction.do")) {
     		action = new InsertContentsAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("InsertrewordAction.do")) {
+    		action = new InsertrewordAction();
+    		try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("MovementDetailAction.do")) {
+    		action = new MovementDetailAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

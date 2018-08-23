@@ -4,16 +4,16 @@
 
 <mapper namespace="Funding.Mapper.RewardMapper">		<!-- 이렇게 되면 같은 경로에 BoardMapper 인터페이스가 필요하다. -->
 	<cache />
-	<select id="DetailRewardList" parameterType="int" resultType="Funding.Bean.Reward">
-	select * from Reward
-	where c_num = #{c_num}
+	<select id="DetailRewardList" parameterType="int" resultType="Reward">
+		select * from reward
+		where c_num = #{c_num}
 	</select>
 	
 	<insert id="InsertReward" parameterType="Reward">
 		insert into reward(
-			c_num,r_num,r_price,r_title,r_detail
+			c_num, r_num,r_price, r_title, r_detail
 		)values(
-			#{c_num},reward_r_num.nextval,#{r_price},#{r_title},#{r_detail}
+			#{c_num},reward_r_num.nextval, #{r_price}, #{r_title}, #{r_detail}
 		)
 	</insert>
 	

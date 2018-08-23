@@ -149,12 +149,12 @@
 	<!-- 리워드 설정 -->
 		<div id = "settingRewardWrap">
 			<div class="reWrap">
-			<form Action="" method="post">
+			<form>
 				<div class="reTitle">
 					<h2>리워드 #1</h2>
 				</div>
 				<div class="reInfo">
-						<input type="hidden" value=${member.c_num } name="c_num">
+						<input type="hidden" value=${member.c_num } id="c_num" name="c_num">
 					<p>
 						금액
 						<input type="number" id="rewardMoney" name="r_price">

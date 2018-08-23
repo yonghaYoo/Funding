@@ -26,7 +26,8 @@ public class RewardService {
 
 public List<Reward>listDetailRewardList(int c_num){
 
-	List<Reward> list = new ArrayList<Reward>();
+	List<Reward> list =null;
+	list = dao.DetailRewardList(c_num);
 	return list;
 }
 
