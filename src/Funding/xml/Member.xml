@@ -9,5 +9,9 @@
 		select * from member
 	</select>
 	
+	<select id="infoMember" parameterType="int" resultType="Member">
+	select * from member where m_num=#{m_num}
+	</select>
+	
 	
 </mapper>

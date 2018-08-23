@@ -42,6 +42,7 @@ public class ContentsDao {
       list=null;
       
       try {
+    	  System.out.println(sqlSession.getMapper(ContentsMapper.class));
          list = sqlSession.getMapper(ContentsMapper.class).AllListContents();
       } catch (Exception e) {
          e.printStackTrace();

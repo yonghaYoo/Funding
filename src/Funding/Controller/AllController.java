@@ -18,25 +18,27 @@ import Funding.Action.InsertContentsAction;
 import Funding.Action.InsertrewordAction;
 import Funding.Action.LoginAction;
 import Funding.Action.LogoutAction;
+import Funding.Action.MemberInfoAction;
 import Funding.Action.MovementAddContentsAction;
 import Funding.Action.MovementLoginAction;
-
+import Funding.Action.MovementMyInfoAction;
 
 @WebServlet("*.do")
 public class AllController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
-    public AllController() {
-        super();
-    }
-    
-    public void doProcess(HttpServletRequest request, HttpServletResponse response)throws SecurityException,IOException, ServletException{
-    	String requsetURI = request.getRequestURI();//�슂泥�諛쏆� uri瑜� 戮묒븘�삩�떎.
-    	System.out.println(requsetURI);	// /MVC/insertForm.do //�뿬湲곗꽌 MVC�뒗 而⑦뀓�뒪�듃寃쎈줈.
+
+	public AllController() {
+		super();
+	}
+
+	public void doProcess(HttpServletRequest request, HttpServletResponse response)throws SecurityException,IOException, ServletException{
+    	String requsetURI = request.getRequestURI();
+    	System.out.println(requsetURI);	
     	
-    	String contextPath = request.getContextPath();	//context寃쎈줈瑜� 戮묒븘�궦�떎.
-    	String command = requsetURI.substring(contextPath.length()+1);	//command�씪�뒗 蹂��닔�뿉 uri�쓽 而⑦뀓�뒪�듃 寃쎈줈瑜� 類댁��떎.
+
+    	String contextPath = request.getContextPath();	
+    	String command = requsetURI.substring(contextPath.length()+1);
     	System.out.println(command);
     	
     	Action action = null;
@@ -114,25 +116,42 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+    	}else if(command.equals("MemberInfoAction.do")){
+    		action = new MemberInfoAction();
+    		try {
+    			forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("MovementMyInfoAction.do")){
+    		action = new MovementMyInfoAction();
+    		try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	 	
     	}
     	
     	if(forward!=null){
     		if(forward.isRedirect()){
     			response.sendRedirect(forward.getPath());
     		}else{
+    			
     			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
     			dispatcher.forward(request, response);
     		}
     	}
-    	
-    }
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doProcess(request, response);
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doProcess(request, response);
 	}
 

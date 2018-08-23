@@ -44,6 +44,7 @@
       	<c:when test="${member.c_num == null}">
       		<div>
             회원가입
+
          	</div>
       	</c:when>
       	
@@ -55,7 +56,6 @@
       		</div>
       	</c:otherwise>
       </c:choose>
-         
          <div>
          	<a href="MovementAddContentsAction.do">
             컨텐츠 추가
@@ -70,7 +70,6 @@
       </div>
       <div id="shadows">
          </div>
-      
       <div id="mainImage">
             <img  src="img/main5.jpg">
             <div id="shadows">

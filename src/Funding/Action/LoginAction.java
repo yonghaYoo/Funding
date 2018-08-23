@@ -35,10 +35,15 @@ public class LoginAction implements Action {
 				forward.setPath("AllListContentsAction.do");
 				forward.setRedirect(false);
 				
-				if(session!=null) {
+				/*if(session!=null) {
 					session.setAttribute("member", list.get(i));
-				}
+				}*/
+				session.setAttribute("member", list.get(i));
 				
+				Member member = new Member();
+				member = (Member)session.getAttribute("member");
+				
+				System.out.println(member.getM_num());
 				break;
 			}else {
 				forward.setPath("Login.jsp");

@@ -19,13 +19,14 @@ public class AllListContentsAction implements Action {
    @Override
    public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
       
-      AllListContentsService service = AllListContentsService.getInstance();
+   
       ContentsService service2 = ContentsService.getInstance();
       
       List<Contents> list = new ArrayList<Contents>();
       list = service2.AllListContents();
       
       request.setAttribute("list", list);
+
       
       ActionFoward forward = new ActionFoward();
       forward.setPath("Main.jsp");
