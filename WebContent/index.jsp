@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		location.href = "AllListContentsAction.do";
+		location.href = "MovementDetailAction.do";
 	</script>
 </body>
 </html>

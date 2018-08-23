@@ -21,21 +21,46 @@
       </div>
       
       <div id="loginList">
-         <div>
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
          	<a href="MovementLoginAction.do">
             로그인
             </a>
-         </div>
-         <div>
+            </div>
+      	</c:when>
+      	
+         <c:otherwise>
+         	<div>
+         	<a href="LogoutAction.do">
+            로그아웃
+            </a>
+            </div>
+         </c:otherwise>
+      </c:choose>
+        	
+        	
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
             회원가입
-         </div>
-         <a href="MovementAddContentsAction.do">
+         	</div>
+      	</c:when>
+      	
+      	<c:otherwise>
+      		<div>
+      			<a href="MovementMyInfoAction.do">
+    	 마이 페이지
+    	 		</a>
+      		</div>
+      	</c:otherwise>
+      </c:choose>
+         
          <div>
          	<a href="MovementAddContentsAction.do">
             컨텐츠 추가
             </a>
          </div>
-         </a>
       </div>
    </header>
    
@@ -45,14 +70,15 @@
       </div>
       <div id="mainImage">
             <img  src="img/main5.jpg">
+            <div id="shadows">
+         </div>
          <div   id="mainText">
             <h1>
                DDU DU DDU DU 
             </h1>
             착한얼굴에 그렇지 못한태도 가녀린 몸매속 가려진 볼륨은 두배로
          </div>
-         <div id="shadows">
-         </div>
+         
       </div>
       <div id="pattern">
       </div>

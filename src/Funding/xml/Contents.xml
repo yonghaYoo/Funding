@@ -20,6 +20,16 @@
 			#{c_num},#{c_title},#{c_cate},#{c_intro},#{c_text},#{c_midimg},#{c_topimg},#{c_dead},#{c_goal},#{c_thimg}
 		)
 		
-	</insert>	
-
+	</insert>
+	
+	<!-- <update id="RemDayContents" parameterType="String">
+		update contents set c_remday = (#{c_dead}-SYSDATE)+1
+	</update> -->
+	
+	<update id="GoalPerContents" parameterType="Contents">
+		update contents set c_goalper = round(#{c_sumprice}/#{c_goal}*100)
+		where c_num=#{c_num}
+	</update>
+	
+	
 </mapper>

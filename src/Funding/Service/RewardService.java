@@ -27,6 +27,8 @@ public class RewardService {
 public List<Reward>listDetailRewardList(int c_num){
 
 	List<Reward> list = new ArrayList<Reward>();
+	
+	//??????????????
 	return list;
 }
 
