@@ -15,7 +15,6 @@ import Funding.Action.CheckBoxValueAction;
 import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
 import Funding.Action.InsertContentsAction;
-import Funding.Action.InsertRewardAction;
 import Funding.Action.InsertrewordAction;
 import Funding.Action.LoginAction;
 import Funding.Action.LogoutAction;
