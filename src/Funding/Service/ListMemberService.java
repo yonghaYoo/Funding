@@ -22,4 +22,11 @@ public class ListMemberService {
 		
 		return list;
 	}
+	
+	public Member infoMember(int m_num){
+		Member member = new Member();
+		member = dao.infoMember(m_num);
+		
+		return member;
+	}
 }

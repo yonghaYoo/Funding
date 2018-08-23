@@ -20,7 +20,9 @@ public class AllListContentsAction implements Action {
       List<Contents> list = new ArrayList<Contents>();
       list = service.AllListContents();
       request.setAttribute("list", list);
-      
+     
+      System.out.println("aa");
+      System.out.println(list.get(0));
       
       ActionFoward forward = new ActionFoward();
       forward.setPath("Main.jsp");

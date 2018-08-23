@@ -38,10 +38,6 @@ public class MemberDao {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		List<Member> list =null;
 		try {
-			System.out.println("1");
-			System.out.println("sqlSession1111111111: " + sqlSession);
-			System.out.println("최종: " + sqlSession.getMapper(MemberMapper.class));
-			
 			list = sqlSession.getMapper(MemberMapper.class).listMember();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -52,4 +48,19 @@ public class MemberDao {
 		
 		return list;
 	}
+	
+	public Member infoMember(int m_num){
+		SqlSession sqlSession = getSqlSessionFactory().openSession();
+		Member member = null;
+		try {
+			member = sqlSession.getMapper(MemberMapper.class).infoMember(m_num);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return member;
+	}
+
 }

@@ -24,9 +24,9 @@
          <div>
             로그인
          </div>
-         <div>
+         <a href="MovementMyInfoAction.do"><div>
             회원가입
-         </div>
+         </div></a>
          <a href="MovementAddContentsAction.do">
          <div>
             컨텐츠 추가
@@ -39,6 +39,8 @@
       <div id="subImage">
          <img  src="img/main4.jpg">
       </div>
+      <div id="shadows">
+         </div>
       <div id="mainImage">
             <img  src="img/main5.jpg">
          <div   id="mainText">
@@ -47,8 +49,7 @@
             </h1>
             착한얼굴에 그렇지 못한태도 강렬한 몸매속 가려진 볼륨은 두배로
          </div>
-         <div id="shadows">
-         </div>
+         
       </div>
       <div id="pattern">
       </div>

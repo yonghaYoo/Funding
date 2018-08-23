@@ -166,7 +166,6 @@ body {
 		height: 20%;
 		padding-left: 26%;
 		padding-top: 50px;
-		float:left;
 	}
 	
 	.item{
@@ -199,9 +198,7 @@ body {
 		padding-top: 25px;
 	}
 	
-	#conlist{
-		float:left;
-	}
+
 	#conlist h2{
 		float: none;
 	}

@@ -37,8 +37,8 @@
 	<div id = "pageturn"></div>
 	<div >
 		<ul id ="MyList"> 
-			<li><a>내정보 보기<a></a></li>
-			<li>결제 내역</li>
+			<li id = "myInfo">내정보 보기</li>
+			<li>예약 내역</li>
 			<li>내가 만든 컨텐츠</li>
 		</ul>
 	</div>
@@ -47,48 +47,50 @@
 		<div id="Information">
 			<div id="PersonalInformation">
 			<br><br>
-				<div class="name">이름[name]</div><br>
+				<div class="name">이름[${member.m_name}]</div><br>
 						
-				<div class="Id">id[id]</div><br>
+				<div class="Id">id[${member.m_id}]</div><br>
 				
-				<div class = "Email">이메일[e-mail]</div><br>
+				<div class = "Email">이메일[${member.m_email}]</div><br>
 			
-				<div class = "Acc">계좌번호[acc]</div><br>
+				<div class = "Acc">계좌번호[${member.m_acc}]</div><br>
 		
-				<div class = "Point">포인트[point]</div><br>
-			<br>
+				<div class = "Point" style="border-bottom: 2px solid black;">포인트[${member.m_ownpoint}]</div><span></span>
+		
 	</div>
 </div>
 	<!-- 본문 끝 -->
 	
-	<!-- 예약내역 시작 -->
+	<!-- 결제내역 시작 -->
 	
-	<div id = FundinfList>
+	
 		<!-- 나중에 foreach 로 변경 해야 해요... -->
-		<div id = FundinfList2>
-			<p>컨텐츠 제목</p>
-			<p>간단한 소개</p>
-			<p>예약 날짜</p>
-			<p>예약 금액</p>
-			<p>결제 일시</p>
-		
+		<div id = lalala></div>
+		<div id = FundinfList>
+			<div>컨텐츠 제목</div><br>
+			<div>간단한 소개</div><br>
+			<div>예약 날짜</div><br>
+			<div>예약 금액</div><br>
+			<div>결제 일시</div><br>
 		</div>
 		
 	<div id = "ShareFunding">
-		<p>공유하기</p>
-		<p>자세히 보기</p>
+		<div>공유하기</div><br>
+		<div>자세히 보기</div><br>
 	</div>	
-	</div>
-		
 	
+		
+	<div></div>
 	
 	<div id ="MyCotentsListUp">
-		<p>컨텐츠</p>
+		<br>
+		<div>컨텐츠</div>
 	</div>
 	<div id="ContentsDisplay">
 		<div id="img">
 			<img  src="img/tumb01.jpg">
-			<a href=""></a><!-- detail로 넘어가요 -->
+			<!-- 링크 걸기 -->
+			<a href=""><div id="LinkFunding">집사를 위한 츄르 100개</div></a><!-- detail로 넘어가요 -->
 	</div>
 	
 	

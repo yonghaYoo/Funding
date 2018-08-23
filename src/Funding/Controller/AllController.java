@@ -15,25 +15,25 @@ import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
 import Funding.Action.InsertContentsAction;
 import Funding.Action.LoginAction;
+import Funding.Action.MemberInfoAction;
 import Funding.Action.MovementAddContentsAction;
 import Funding.Action.MovementLoginAction;
-
+import Funding.Action.MovementMyInfoAction;
 
 @WebServlet("*.do")
 public class AllController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
-    public AllController() {
-        super();
-    }
-    
-    public void doProcess(HttpServletRequest request, HttpServletResponse response)throws SecurityException,IOException, ServletException{
-    	String requsetURI = request.getRequestURI();//요청받은 uri를 뽑아온다.
-    	System.out.println(requsetURI);	// /MVC/insertForm.do //여기서 MVC는 컨텍스트경로.
+	public AllController() {
+		super();
+	}
+
+	public void doProcess(HttpServletRequest request, HttpServletResponse response)throws SecurityException,IOException, ServletException{
+    	String requsetURI = request.getRequestURI();
+    	System.out.println(requsetURI);	
     	
-    	String contextPath = request.getContextPath();	//context경로를 뽑아낸다.
-    	String command = requsetURI.substring(contextPath.length()+1);	//command라는 변수에 uri의 컨텍스트 경로를 뺴준다.
+    	String contextPath = request.getContextPath();	
+    	String command = requsetURI.substring(contextPath.length()+1);
     	System.out.println(command);
     	
     	Action action = null;
@@ -76,25 +76,42 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+    	}else if(command.equals("MemberInfoAction.do")){
+    		action = new MemberInfoAction();
+    		try {
+    			forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	}else if(command.equals("MovementMyInfoAction.do")){
+    		action = new MovementMyInfoAction();
+    		try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	 	
     	}
     	
     	if(forward!=null){
     		if(forward.isRedirect()){
     			response.sendRedirect(forward.getPath());
     		}else{
+    			
     			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
     			dispatcher.forward(request, response);
     		}
     	}
-    	
-    }
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doProcess(request, response);
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		doProcess(request, response);
 	}
 

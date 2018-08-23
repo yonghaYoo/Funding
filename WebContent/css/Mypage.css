@@ -104,17 +104,39 @@ header #loginList {
 	float: left;
 }
 
-#FundinfList {
-	font-size: 25px;
+#lalala{
+	height: 30px;
+	border-top: 2px solid black;
+}
+#FundinfList{
+
 	text-align: center;
-	width: 100%;
-	float: left;
+	font-size: 25px;
+
+	}
+#FundinfList:FIRST-CHILD{
+	margin-left: 14%;
 }
 
-#ShareFunding {
-	
+#ShareFunding{
+	text-align: center;
+	font-size: 25px;
+}
+#MyCotentsListUp{
+	border-top: 2px solid black;
+	text-align: center;
+	font-size: 25px;
+}
+#ContentsDisplay img{
+display: block; 
+margin-left: auto;
+margin-right: auto;	
 }
 
+#LinkFunding{
+	text-align: center;
+	font-size: 25px;
+}
 footer {
 	width: 100%;
 	height: 100px;
