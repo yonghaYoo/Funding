@@ -11,6 +11,7 @@
 		<typeAlias type="Funding.Bean.FundingCancle" alias="FundingCancle"/>
 		<typeAlias type="Funding.Bean.Payment" alias="Payment"/>
 		<typeAlias type="Funding.Bean.Reward" alias="Reward"/>
+		<typeAlias type="Funding.Bean.Myreservation" alias="Myreservation"/>
 	</typeAliases>
 	
 	<environments default="development">
@@ -30,6 +31,7 @@
 		<mapper resource="Funding/xml/FundingCancle.xml"/>
 		<mapper resource="Funding/xml/Payment.xml"/>
 		<mapper resource="Funding/xml/Reward.xml"/>
+		<mapper resource="Funding/xml/Myreservation.xml"/>
 	</mappers>
 	
 </configuration>

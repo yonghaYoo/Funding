@@ -4,16 +4,19 @@
 
 <mapper namespace="Funding.Mapper.FundingMapper">		<!-- 이렇게 되면 같은 경로에 BoardMapper 인터페이스가 필요하다. -->
 	<cache />
-	
-	<insert id="InsertReFunding" parameterType="Funding" >
-		insert into funding(
-			f_rename,f_readd,f_price,f_card_1,f_card_2,f_card_3,f_card_4,f_resday,f_num,m_num
+
+	<insert id="InsertReFunding" parameterType="Funding">
+		insert into
+		funding(
+		f_rename,f_readd,f_price,f_card_1,f_card_2,f_card_3,f_card_4,f_resday,f_num,m_num
 		)values(
-			#{f_rename},#{f_readd},#{f_price},#{f_card_1},#{f_card_2},#{f_card_3},#{f_card_4},sysdate,funding_f_num.nextval,#{m_num}
+		#{f_rename},#{f_readd},#{f_price},#{f_card_1},#{f_card_2},#{f_card_3},#{f_card_4},sysdate,funding_f_num.nextval,#{m_num}
 		)
-		
+
 	</insert>
-	<!-- <select id="listReply" resultType="Reply" parameterType="int">
-		select * from Reply where seq=#{seq}
-	</select> -->
+
+	<select id="MyFunding" parameterType="int" resultType="Funding">
+		select from * Funding where m_num =#{m_num}
+	</select>
+
 </mapper>

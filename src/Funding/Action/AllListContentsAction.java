@@ -19,12 +19,12 @@ public class AllListContentsAction implements Action {
    @Override
    public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
       
-   
+	   System.out.println("oo");
       ContentsService service2 = ContentsService.getInstance();
-      
+      System.out.println("oo");
       List<Contents> list = new ArrayList<Contents>();
       list = service2.AllListContents();
-      
+      System.out.println("mkmk");
       request.setAttribute("list", list);
 
       
