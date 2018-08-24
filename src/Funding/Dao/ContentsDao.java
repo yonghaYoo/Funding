@@ -39,11 +39,11 @@ public class ContentsDao {
       SqlSession sqlSession = getSqlSessionFactory().openSession();
       
       List<Contents> list = new ArrayList<Contents>();
-      list=null;
       
       try {
     	  System.out.println(sqlSession.getMapper(ContentsMapper.class));
          list = sqlSession.getMapper(ContentsMapper.class).AllListContents();
+         System.out.println("wow : " +list.get(2).getC_num());
       } catch (Exception e) {
          e.printStackTrace();
       } finally {

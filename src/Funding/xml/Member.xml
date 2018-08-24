@@ -10,7 +10,7 @@
 	</select>
 	
 	<select id="infoMember" parameterType="int" resultType="Member">
-	select * from member where m_num=#{m_num}
+	select * from member where m_num=#{m_num}<!-- 마이페이지 -->
 	</select>
 	
 	

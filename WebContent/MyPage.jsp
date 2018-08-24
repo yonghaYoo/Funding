@@ -47,6 +47,7 @@
 		<div id="Information">
 			<div id="PersonalInformation">
 			<br><br>
+			
 				<div class="name">이름[${member.m_name}]</div><br>
 						
 				<div class="Id">id[${member.m_id}]</div><br>
@@ -63,17 +64,30 @@
 	
 	<!-- 결제내역 시작 -->
 	
-	
+	<c:forEach var="wow" items="${reList }">
 		<!-- 나중에 foreach 로 변경 해야 해요... -->
 		<div id = lalala></div>
 		<div id = FundinfList>
-			<div>컨텐츠 제목</div><br>
-			<div>간단한 소개</div><br>
-			<div>예약 날짜</div><br>
-			<div>예약 금액</div><br>
-			<div>결제 일시</div><br>
+			<div>컨텐츠 제목
+			[${wow.c_title}]</div><br>
+			
+			<div>간단한 소개
+			[${wow.c_intro}]
+			</div><br>
+			
+			<div>예약 날짜
+			[${wow.f_resday}]
+			</div><br>
+			
+			<div>예약 금액
+			[${wow.f_price}]
+			</div><br>
+			
+			<div>예약 일시
+			[${wow.f_resday}]
+			</div><br>
 		</div>
-		
+	</c:forEach>
 	<div id = "ShareFunding">
 		<div>공유하기</div><br>
 		<div>자세히 보기</div><br>

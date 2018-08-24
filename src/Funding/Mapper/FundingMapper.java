@@ -1,8 +1,13 @@
 package Funding.Mapper;
 
-import Funding.Bean.Reward;
+import java.util.List;
+
+import Funding.Bean.Funding;
+
 
 public interface FundingMapper {
 	
-	Reward DetailRewardList (int c_num);
+	Funding MyFunding(int m_num);
+
+
 }

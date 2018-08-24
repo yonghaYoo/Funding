@@ -8,7 +8,7 @@ import Funding.Controller.ActionFoward;
 public class CompleteResListAction implements Action{
 	@Override
 	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 }

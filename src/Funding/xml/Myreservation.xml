@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Funding.Mapper.MyreservationMapper">		
+	<cache />
+	
+	<select id="getMyres" parameterType="int" resultType="Myreservation">
+	
+	SELECT c.c_title, c.c_intro, f.f_resday, f.f_price
+	from funding f, member m,contents c
+	where f.m_num = m.m_num 
+	and c.c_num = m.c_num
+	and m.m_num=#{m_num}
+	
+	
+	</select>
+	
+</mapper>

@@ -15,7 +15,7 @@ import Funding.Action.CheckBoxValueAction;
 import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
 import Funding.Action.InsertContentsAction;
-import Funding.Action.InsertrewordAction;
+import Funding.Action.InsertRewardAction;
 import Funding.Action.LoginAction;
 import Funding.Action.LogoutAction;
 import Funding.Action.MemberInfoAction;
@@ -109,8 +109,8 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    	}else if(command.equals("InsertrewordAction.do")) {
-    		action = new InsertrewordAction();
+    	}else if(command.equals("InsertRewardAction.do")) {
+    		action = new InsertRewardAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
@@ -143,7 +143,7 @@ public class AllController extends HttpServlet {
     		}
     	}
 	}
-	
+
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
