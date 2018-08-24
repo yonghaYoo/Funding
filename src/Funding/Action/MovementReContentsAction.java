@@ -7,7 +7,7 @@ import javax.websocket.Session;
 
 import Funding.Controller.ActionFoward;
 
-public class MovementAddContentsAction implements Action {
+public class MovementReContentsAction implements Action {
 
 	@Override
 	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {

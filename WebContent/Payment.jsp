@@ -64,17 +64,18 @@
 	<!-- 상단 인디케이터 끝 -->
 	
 	<!--  리워드 선택 시작-->
-	<form action="" method="post">
+	<form action="InsertReFundingAction.do" method="post">
 		<section id ="selectReward">
 				
 				<h2>리워드 선택</h2>
 				<!-- 리워드 체크 -->
+				<c:forEach var="Contents" items="${list}">
 				<div class="select">
 					<div class="check">
-						<input type="checkbox"  id="r_num" >
-						<label for="r_num"><span></span>	</label>
+						<input type="checkbox"  id="${Contents.r_num }" value="${Contents.r_price }">
+						<label for="${Contents.r_num }"><span></span>	</label>
 					</div>
-					<c:forEach var="Contents" items="${list}">
+					
 					<div class="rewardText">
 						<h4>${Contents.r_price} 펀딩합니다</h4>
 						<hr/>
@@ -83,17 +84,17 @@
 						<p>${Contents.r_detail}</p>
 						<p>배송비 : 0원</p>
 					</div>
-					<input type="hidden" id="contentsPrice" value="${Contents.r_price }">
-					</c:forEach>
+					
+					
 				</div>
-				
+				</c:forEach>
 				
 				<!-- 리워드 체크 끝 -->
 				<div id = "totalPrice">
 					<p>
 					${Contents.c_title} 에</p>
 					<p>
-					<b>(거래금액)</b> 를 펀딩합니다. </p>
+					<b></b> 를 펀딩합니다. </p>
 					<div id="nextButton"> 다음단계로</div>
 				</div>
 			
@@ -103,19 +104,21 @@
 	<!-- 결제정보 입력 -->	
 		<section id="paywrap">
 			<section id="paymentInfo">
-				<div id="obj_price">
+				<%-- <div id="obj_price">
 					<h2>수량 및 가격</h2>
 					<p>[리워드 제목]${Contents.c_title}</p>
 					<p>[리워드 상세 설명]${Reward.r_detail}</p>
 					<p>수량 : 1개&nbsp; &nbsp;&nbsp;64000원</p>
+					
 				</div>
 				<div id ="depay">
 					<h2>배송비</h2>
 					<p>0원</p>
 				</div>
+				지우지마세요!!!!!!!!!!!!!!!!!!!!!!--%>
 				<div id = "finalPrice">
 					<h1>최종결제금액</h1>
-					<h1>64000원</h1>
+					<h1>원</h1>
 				</div>
 			</section>
 			
@@ -127,7 +130,7 @@
 							<h4>
 								받는분 성함
 							</h4>
-							<input type="text"  id="f_rename">
+							<input type="text"  id="f_rename" name="f_rename">
 						</div>
 						<div id ="depno">
 							<h4>
@@ -200,7 +203,10 @@
 					
 					<div id="paysubmit">
 						<div id ="back">돌아가기</div>
+						<a href="InsertReFundingAction.do">
 						<input type="submit" value="결제 예약하기" id="paysubm">
+						<input type="hidden" value="${member.m_num }" name="m_num">
+						</a>
 					</div>
 			</section>
 		</section>

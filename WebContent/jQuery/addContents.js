@@ -61,7 +61,7 @@ $('#newReward').click(function(){
 		alert("aa");
 		
 		$.ajax({
-			url:"InsertrewordAction.do",
+			url:"InsertRewardAction.do",
 			type:'post',
 			datatype:'text',
 			data:$(this).serialize(),

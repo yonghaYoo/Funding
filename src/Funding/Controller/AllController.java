@@ -15,11 +15,12 @@ import Funding.Action.CheckBoxValueAction;
 import Funding.Action.MovementDetailAction;
 import Funding.Action.MovementResAction;
 import Funding.Action.InsertContentsAction;
-import Funding.Action.InsertrewordAction;
+import Funding.Action.InsertReFundingAction;
+import Funding.Action.InsertRewardAction;
 import Funding.Action.LoginAction;
 import Funding.Action.LogoutAction;
 import Funding.Action.MemberInfoAction;
-import Funding.Action.MovementAddContentsAction;
+import Funding.Action.MovementReContentsAction;
 import Funding.Action.MovementLoginAction;
 import Funding.Action.MovementMyInfoAction;
 
@@ -68,7 +69,7 @@ public class AllController extends HttpServlet {
 				e.printStackTrace();
 			}
     	}else if(command.equals("MovementAddContentsAction.do")) {
-    		action = new MovementAddContentsAction();
+    		action = new MovementReContentsAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
@@ -109,8 +110,8 @@ public class AllController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-    	}else if(command.equals("InsertrewordAction.do")) {
-    		action = new InsertrewordAction();
+    	}else if(command.equals("InsertRewardAction.do")) {
+    		action = new InsertRewardAction();
     		try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
@@ -125,6 +126,14 @@ public class AllController extends HttpServlet {
 			}
     	}else if(command.equals("MovementMyInfoAction.do")){
     		action = new MovementMyInfoAction();
+    		try {
+				forward= action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+    	 	
+    	}else if(command.equals("InsertReFundingAction.do")){
+    		action = new InsertReFundingAction();
     		try {
 				forward= action.execute(request, response);
 			} catch (Exception e) {
