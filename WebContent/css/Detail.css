@@ -14,6 +14,11 @@ p{
 	
 }
 
+a{
+	text-decoration: none;
+	color:black;
+}	
+
 header{
 		width:100%;
 		height: 80px;
@@ -98,17 +103,35 @@ header{
 	
 }
 
+#mainText:before{
+	 content: ""; 
+	 display: inline-block;
+    width: 1px; 
+    height: 5%;
+    margin-right: 0; 
+    vertical-align: middle;
+
+}
+
 #mainText h1{
-	font-size: 36px;
+	font-size: 30px;
 	font-family: 'Gothic A1', sans-serif;
 	margin-bottom: 10px;
-	margin-top:50px;
+	margin-top:20px;
+	width:100%;
+	
+	
 }
 
 #mainText p{
 	margin-top: 0px;
-	
+	width:80%;
+	margin :0 auto;
+
 }
+
+
+
 
 #fundingbutton{
 	width:20%;

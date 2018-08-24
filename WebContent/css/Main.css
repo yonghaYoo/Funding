@@ -14,6 +14,10 @@ body {
 		float:left;
 	}
 	
+a{
+	text-decoration: none;
+	color:black;
+}	
 	header #title{
 		font-size: 25px;
 		display:inline-block;
@@ -128,9 +132,15 @@ body {
 	} 
 	
 	#mainText h1{
-		font-family: 'Gothic A1', sans-serif;
+		font-family: 'Gugi', cursive; 
 		font-size: 52px;
-		margin: 20px 0 10px 0;
+		margin: 20px 0 10px 80px;
+
+	}
+	
+	#mainText p{
+		display: inline-block;
+		margin-top:0;
 	}
 	
 	/* #shadows{
@@ -147,6 +157,42 @@ body {
 		right:5%;
 		top:15%;
 		box-shadow: 20px 20px 40px -5px #1b1b1b;
+	}
+	
+	#nextButton{
+		float:right;
+		margin-left:20px;
+		margin-right:20px;
+		width:60px;
+		height: 30px;
+		text-align: center;
+		transition:0.2s;
+	}
+	
+	#nextButton:hover{
+	background-color: #14a085;
+	color:white;
+	font-weight: bold;
+	border:0.5px solid #14a085;
+	border-radius:5px;
+	}
+	
+	#beforeButton{
+		float:left;
+		margin-right:20px;
+	
+		width:60px;
+		height: 30px;
+		text-align: center;
+		transition:0.3s;
+	}
+	
+	#beforeButton:hover{
+	background-color: #14a085;
+	color:white;
+	font-weight: bold;
+	border:0.5px solid #14a085;
+	border-radius:5px;
 	}
 	
 	#middle{
@@ -231,10 +277,16 @@ body {
 		height: 100%;
 	}
 	.contentstext{
-		width:100%;
-		height:25%;
+		width:90%;
+		height:35%;
 		padding-top:10px;
-		
+		overflow: hidden;
+		margin:0 auto;
+	}
+	
+	.contentstext p{
+		font-size: 14px;
+		color:#a8a8a8;
 	}
 	
 	.graph{

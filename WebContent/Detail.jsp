@@ -13,24 +13,58 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- 헤더 시작 -->
-	<header>
-		<div id="title">
-		<h3>프로젝트명</h3>
-		</div>
-		<div id="loginList">
-			<div>
-				로그인
-			</div>
-			<div>
-				회원가입
-			</div>
-			<div>
-				컨텐츠 추가
-			</div>
-		</div>
-	</header>
-	<!-- 헤더끝 -->
+	<!-- 헤더 -->
+   <header>
+      <div id="title">
+      <a href="AllListContentsAction.do"><h3>프로젝트명</h3></a>
+      </div>
+      
+      <div id="loginList">
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+         	<a href="MovementLoginAction.do">
+            로그인
+            </a>
+            </div>
+      	</c:when>
+      	
+         <c:otherwise>
+         	<div>
+         	<a href="LogoutAction.do">
+            로그아웃
+            </a>
+            </div>
+         </c:otherwise>
+      </c:choose>
+        	
+        	
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+            회원가입
+
+         	</div>
+      	</c:when>
+      	
+      	<c:otherwise>
+      		<div>
+      			<a href="MovementMyInfoAction.do">
+    	 마이 페이지
+    	 		</a>
+      		</div>
+      	</c:otherwise>
+      </c:choose>
+         <div>
+         	<a href="MovementAddContentsAction.do">
+            컨텐츠 추가
+            </a>
+         </div>
+      </div>
+   </header>
+   
+   
+   <!-- 헤더 끝 -->
 	
 	
 	<!-- 본문 시작 -->
@@ -44,9 +78,11 @@
 				<h1>${Contents.c_title}</h1>
 				<p>${Contents.c_intro }</p>
 			</div>
-			<div id="fundingbutton">
-				<a href="MovementResAction.do?c_num=${Contents.c_num}"><h1>펀딩하기</h1></a>
-			</div>
+			<a href="MovementResAction.do?c_num=${Contents.c_num}">
+				<div id="fundingbutton">
+					<h1>펀딩하기</h1>
+				</div>
+			</a>
 		</div>
 	</section>
 	

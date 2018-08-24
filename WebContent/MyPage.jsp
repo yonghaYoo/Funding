@@ -14,18 +14,58 @@
 </head>
 <body>
 <body>
-	<header><!-- 헤더 시작 -->
-	<div id="title">
-		<h3>프로젝트명</h3>
-	</div>
+	<!-- 헤더 -->
+   <header>
+      <div id="title">
+      <a href="AllListContentsAction.do"><h3>프로젝트명</h3></a>
+      </div>
+      
+      <div id="loginList">
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+         	<a href="MovementLoginAction.do">
+            로그인
+            </a>
+            </div>
+      	</c:when>
+      	
+         <c:otherwise>
+         	<div>
+         	<a href="LogoutAction.do">
+            로그아웃
+            </a>
+            </div>
+         </c:otherwise>
+      </c:choose>
+        	
+        	
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+            회원가입
 
-	<div id="loginList">
-		<div>로그인</div>
-		<div>회원가입</div>
-		<div>컨텐츠 추가</div>
-	</div>
-	</header>
-	<!-- 헤더 끝 -->
+         	</div>
+      	</c:when>
+      	
+      	<c:otherwise>
+      		<div>
+      			<a href="MovementMyInfoAction.do">
+    	 마이 페이지
+    	 		</a>
+      		</div>
+      	</c:otherwise>
+      </c:choose>
+         <div>
+         	<a href="MovementAddContentsAction.do">
+            컨텐츠 추가
+            </a>
+         </div>
+      </div>
+   </header>
+   
+   
+   <!-- 헤더 끝 -->
 
 	<!--  본문 시작 -->
 	<div id = "title"></div>

@@ -18,24 +18,58 @@
 <script src="jQuery/Payment.js" type="text/javascript"></script>
 </head>
 <body>
-<!-- 헤더 시작 -->
-	<header>
-		<div id="title">
-		<h3>프로젝트명</h3>
-		</div>
-		<div id="loginList">
-			<div>
-				로그인
-			</div>
-			<div>
-				회원가입
-			</div>
-			<div>
-				컨텐츠 추가
-			</div>
-		</div>
-	</header>
-	<!-- 헤더끝 -->
+<!-- 헤더 -->
+   <header>
+      <div id="title">
+      <a href="AllListContentsAction.do"><h3>프로젝트명</h3></a>
+      </div>
+      
+      <div id="loginList">
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+         	<a href="MovementLoginAction.do">
+            로그인
+            </a>
+            </div>
+      	</c:when>
+      	
+         <c:otherwise>
+         	<div>
+         	<a href="LogoutAction.do">
+            로그아웃
+            </a>
+            </div>
+         </c:otherwise>
+      </c:choose>
+        	
+        	
+      <c:choose>
+      	<c:when test="${member.c_num == null}">
+      		<div>
+            회원가입
+
+         	</div>
+      	</c:when>
+      	
+      	<c:otherwise>
+      		<div>
+      			<a href="MovementMyInfoAction.do">
+    	 마이 페이지
+    	 		</a>
+      		</div>
+      	</c:otherwise>
+      </c:choose>
+         <div>
+         	<a href="MovementAddContentsAction.do">
+            컨텐츠 추가
+            </a>
+         </div>
+      </div>
+   </header>
+   
+   
+   <!-- 헤더 끝 -->
 	
 	<!-- 타이틀 -->
 		<section id = "f_title">
@@ -69,12 +103,13 @@
 				
 				<h2>리워드 선택</h2>
 				<!-- 리워드 체크 -->
+				<c:forEach var="Contents" items="${list}">
 				<div class="select">
 					<div class="check">
 						<input type="checkbox"  id="r_num" >
 						<label for="r_num"><span></span>	</label>
 					</div>
-					<c:forEach var="Contents" items="${list}">
+					
 					<div class="rewardText">
 						<h4>${Contents.r_price} 펀딩합니다</h4>
 						<hr/>
@@ -84,9 +119,9 @@
 						<p>배송비 : 0원</p>
 					</div>
 					<input type="hidden" id="contentsPrice" value="${Contents.r_price }">
-					</c:forEach>
+					
 				</div>
-				
+				</c:forEach>
 				
 				<!-- 리워드 체크 끝 -->
 				<div id = "totalPrice">

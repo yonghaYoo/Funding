@@ -9,15 +9,19 @@
         href="https://fonts.googleapis.com/css?family=Gothic+A1:700&amp;subset=korean"
         rel="stylesheet">
 
+
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/Main.css">
 <script src="jquery.js" type="text/javascript"></script>
 <script src="jQuery/Main.js" type="text/javascript"></script>
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 헤더 -->
    <header>
       <div id="title">
-      <h3>프로젝트명</h3>
+      <a href="AllListContentsAction.do"><h3>프로젝트명</h3></a>
       </div>
       
       <div id="loginList">
@@ -64,6 +68,9 @@
       </div>
    </header>
    
+   
+   <!-- 헤더 끝 -->
+   
    <section id="mainFirst">
       <div id="subImage">
          <img  src="img/main4.jpg">
@@ -72,13 +79,15 @@
          </div>
       <div id="mainImage">
             <img  src="img/main5.jpg">
-            <div id="shadows">
-         </div>
-         <div   id="mainText">
+            
+         <div  id="mainText">
             <h1>
                DDU DU DDU DU 
             </h1>
-            착한얼굴에 그렇지 못한태도 가녀린 몸매속 가려진 볼륨은 두배로
+            <p>착한얼굴에 그렇지 못한태도 가녀린 몸매속 가려진 볼륨은 두배로</p>
+            
+            <div id ="nextButton">-></div>
+            <div id="beforeButton"><-</div>
          </div>
          
       </div>
@@ -153,8 +162,8 @@
                   <!-- img경로 설정 -->
                </div>
                <div class="contentstext">
-                  <h3>&nbsp;&nbsp;${Contents.c_title}</h3><br><br>
-                  &nbsp;&nbsp;${Contents.c_intro}
+                  <h3>${Contents.c_title}</h3>
+                  <p>${Contents.c_intro}</p>
                </div>
                <div class="graph">
                   <div class="ing">
