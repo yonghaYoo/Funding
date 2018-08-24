@@ -14,12 +14,20 @@ public class Funding implements Serializable {
 	private int f_card_4;
 	private int r_num;
 	private int m_num;
+	private String f_rename;
 	
 	public Funding() {}
 	
 	
+	
+
+
+
+
+
+
 	public Funding(int f_num, int f_resday, int f_price, int f_amount, String f_readd, int f_card_1, int f_card_2,
-			int f_card_3, int f_card_4, int r_num, int m_num) {
+			int f_card_3, int f_card_4, int r_num, int m_num, String f_rename) {
 		super();
 		this.f_num = f_num;
 		this.f_resday = f_resday;
@@ -32,7 +40,15 @@ public class Funding implements Serializable {
 		this.f_card_4 = f_card_4;
 		this.r_num = r_num;
 		this.m_num = m_num;
+		this.f_rename = f_rename;
 	}
+
+
+
+
+
+
+
 
 
 	public int getF_num() {
@@ -101,6 +117,15 @@ public class Funding implements Serializable {
 	public void setM_num(int m_num) {
 		this.m_num = m_num;
 	}
-	
-	
+
+	public String getF_rename() {
+		return f_rename;
+	}
+
+	public void setF_rename(String f_rename) {
+		this.f_rename = f_rename;
+	}
+
+
+
 }
